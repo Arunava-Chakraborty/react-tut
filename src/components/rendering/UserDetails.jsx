@@ -1,12 +1,63 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 export function UserDetails ({user}){
+
+    // eslint-disable-next-line no-unused-vars
+    const [isEditing , setisEditing] = useState(false)
+    // eslint-disable-next-line react/prop-types
+    const [username , setUsername] = useState(user.username)
+    // eslint-disable-next-line react/prop-types
+    const [useremail, setUseremail] = useState(user.useremail)
+
+   
     return(
-        <div key = {user.id}>
-                        <h1>{user.name}</h1>
-                        <h2>{user.email}</h2>
-                        <h3>{user.age}</h3>
-                        <span>{user.id}</span>
-                    </div>
+        <div>
+            <div>
+                <button
+                   onClick={()=>{
+                      setisEditing((currentstate) => !currentstate)
+                   }}
+                >Edit</button>
+                <button>Delete</button>
+                <button 
+                    onClick={()=>{
+                        console.log(user);
+                    }}
+                >Save</button>
+
+            </div>
+
+           <div>
+             <br />
+            <b>ID :</b>
+            <span>{user.id}</span>
+            <br />
+
+            <b>Name :</b>
+            {isEditing ? <input 
+                name='username'
+                id='username' 
+                value={username}
+                onChange={(e) =>
+                    setUsername(e.target.value)
+                }
+
+            /> :<span>{user.name}</span>}
+            <br />
+            <b>Email :</b>
+            {isEditing ? <input
+            name='Email'
+            id='Email'
+            value ={useremail}
+            onChange={(e)=>{
+                setUseremail(e.target.value)
+            }}
+            /> :<span>{user.email}</span>}
+            <br />
+            <b>Age</b>
+            <span>{user.age}</span>
+           </div>
+        </div>
     );
 }
 

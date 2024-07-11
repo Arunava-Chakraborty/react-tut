@@ -30,6 +30,7 @@ export default function App (){
 
             <Event_Handling/>
             <States/>
+            <StateArray/>
 
         </React.Fragment>
     );
