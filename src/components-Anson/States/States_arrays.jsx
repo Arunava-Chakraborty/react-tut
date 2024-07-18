@@ -6,21 +6,15 @@ export default function StateArray (){
     const [users , SetUsers] = useState([
         {
             id: 1,
-            name: "John1",
-            email:"john1@email.com",
+            name: "1",
+            email:"2",
             age: 20
         },
         {
             id: 2,
-            name: "John2",
+            name: "",
             email:"john2@email.com",
             age: 21
-        },
-        {
-            id: 3,
-            name: "John3",
-            email:"john3@email.com",
-            age: 22
         }
     ])
 

@@ -1,8 +1,9 @@
-import UserProfile from "./components/basic_jsx/userProfile";
+import UserProfile from "./components-Anson/basic_jsx/userProfile"
 import React from "react";
-import Event_Handling from "./components/event-handling/event-handling";
-import States from "./components/States/Basic_States";
-import StateArray from "./components/States/States_arrays";
+import Event_Handling from "./components-Anson/event-handling/event-handling"
+import States from "./components-Anson/States/Basic_States";
+import StateArray from "./components-Anson/States/States_arrays";
+import App_hitesh from "../React-Hitesh/src/App2";
 
 export default function App (){
 
@@ -31,6 +32,7 @@ export default function App (){
             <Event_Handling/>
             <States/>
             <StateArray/>
+            <App_hitesh/>
 
         </React.Fragment>
     );

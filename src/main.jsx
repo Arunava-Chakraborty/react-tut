@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Food from './components/basic_jsx/userFoood';
-import ArrayRendering from './components/rendering/ArrayRendering';
+import Food from './components-Anson/basic_jsx/userFoood';
+import ArrayRendering from './components-Anson/rendering/ArrayRendering';
 
 
 ReactDOM.createRoot(document.getElementById('main')).render(
